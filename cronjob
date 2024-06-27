@@ -1,0 +1,1 @@
+0 3,14 * * * /usr/bin/docker run --rm --env-file /path/to/env-file -v /mnt/backups:/mnt/backups backup-container

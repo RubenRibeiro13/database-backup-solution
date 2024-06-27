@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  backup:
+    image: backup-container
+    env_file:
+      - /path/to/env-file
+    volumes:
+      - /mnt/backups:/mnt/backups
+    entrypoint: /app/entrypoint.sh
