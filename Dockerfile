@@ -3,8 +3,9 @@ FROM python:3.9-slim
 
 # Install necessary packages
 RUN apt-get update && \
-apt-get install -y postgresql-client && \
-apt-get clean
+apt-get install -y postgresql-client gnupg && \
+apt-get clean && \
+rm -rf /var/lib/apt/lists/*
 
 # Set working directory inside the container
 WORKDIR /app
